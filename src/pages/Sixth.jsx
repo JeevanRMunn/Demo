@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function SixthPage() {
   const [count, setCount] = useState(0);
   const [dogUrl, setDogUrl] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (count > 0) {
@@ -18,6 +20,7 @@ export default function SixthPage() {
       <button onClick={() => setCount(count + 1)}>Fetch Dog</button>
       <p>Fetched {count} times</p>
       {dogUrl && <img src={dogUrl} alt="dog" style={{ maxWidth: "400px" }} />}
+      <button onClick={() => navigate("/seventh")}>Go to Seventh Page</button>
     </div>
   );
 }

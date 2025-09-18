@@ -6,6 +6,8 @@ import ThirdPage from "./pages/ThirdPage";
 import FourthPage from "./pages/FourthPage";
 import Fifth from "./pages/Fifth";
 import Sixth from "./pages/Sixth";
+import Seventh from "./pages/Seventh";
+
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
         <Route path="/fourth" element={<FourthPage />} />
         <Route path="/fifth" element={<Fifth />} />
         <Route path="/sixth" element={<Sixth />} />
+        <Route path="/seventh" element={<Seventh />} />
       </Routes>
     </Router>
   );
